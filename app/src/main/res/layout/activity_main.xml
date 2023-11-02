@@ -31,7 +31,7 @@
             android:text="@string/office"
             android:textColor="@color/white_text"
             android:gravity="center"
-            android:textSize="30dp" />
+            android:textSize="30sp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -50,29 +50,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
-            app:srcCompat="@drawable/mrdecter" />
+            app:srcCompat="@drawable/mrdecter"
+            android:contentDescription="@string/img_info" />
     </RelativeLayout>
 
     <EditText
-        android:textColorHint="@color/hint_text"
-        android:textColor="@color/white_text"
         android:id="@+id/name_text"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:autofillHints="Set your Name"
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/SetName"
         android:inputType="textMultiLine"
         android:minHeight="48dp"
+        android:textColor="@color/white_text"
+        android:textColorHint="#9E9E9E"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
-        android:autofillHints="Set your Name" />
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
 
     <EditText
-        android:textColorHint="@color/hint_text"
-        android:textColor="@color/white_text"
         android:id="@+id/complaint_text"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
@@ -82,10 +81,13 @@
         android:hint="@string/SetProblem"
         android:inputType="textMultiLine"
         android:minHeight="48dp"
+        android:textColor="@color/white_text"
+        android:textColorHint="#9E9E9E"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_text" />
+        app:layout_constraintTop_toBottomOf="@+id/name_text"
+        android:autofillHints="" />
 
     <LinearLayout
         android:layout_width="400dp"
@@ -97,23 +99,29 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:backgroundTint="@color/yellow"
             android:id="@+id/save_btn"
             android:layout_width="50dp"
-            android:layout_margin="10dp"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_weight="1"
-            android:text="@string/save_problem_btn" />
+            android:backgroundTint="@color/yellow"
+            android:onClick="saveDate"
+            android:text="@string/save_problem_btn"
+            android:textColor="@color/white_text"
+            tools:ignore="ButtonStyle,TextContrastCheck" />
 
         <Button
-            android:backgroundTint="@color/yellow"
             android:id="@+id/load_btn"
-            android:layout_margin="10dp"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_marginBottom="16dp"
             android:layout_weight="1"
+            android:backgroundTint="@color/yellow"
+            android:onClick="loadDate"
             android:text="@string/load_problem_btn"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:textColor="@color/white_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="ButtonStyle,TextContrastCheck" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

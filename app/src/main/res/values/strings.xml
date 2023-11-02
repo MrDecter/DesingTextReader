@@ -5,5 +5,6 @@
     <string name="SetProblem">Описание жалобы</string>
     <string name="save_problem_btn">Сохранить</string>
     <string name="load_problem_btn">Загрузить</string>
+    <string name="img_info">Лого</string>
 
 </resources>
