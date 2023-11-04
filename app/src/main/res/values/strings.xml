@@ -5,5 +5,10 @@
     <string name="SetProblem">Описание жалобы</string>
     <string name="save_problem_btn">Сохранить</string>
     <string name="load_problem_btn">Загрузить</string>
+    <string name="main_btn">Главная</string>
+    <string name="arr_problem_btn">Жалобы</string>
+    <string name="other_btn">Другое</string>
+    <string name="img_info">Лого</string>
+    <string name="problem_read">Читать</string>
 
 </resources>
