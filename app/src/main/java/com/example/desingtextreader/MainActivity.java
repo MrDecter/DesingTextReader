@@ -2,6 +2,7 @@ package com.example.desingtextreader;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -27,6 +28,26 @@ public class MainActivity extends AppCompatActivity {
         complaint_text = findViewById(R.id.complaint_text);
     }
 
+    /**
+     * Обработчики кнопок
+     */
+
+    // Оповещение
+    public void goMain (View v){
+        Toast.makeText(this, "Вы уже здесь.", Toast.LENGTH_SHORT).show();
+    }
+
+    // Переход на страницу с жалобами
+    public void goProblem(View v){
+        Intent intent = new Intent(this, MainActivity2.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Обработчики жалоб
+     */
+
+    // Сохранение жалобы
     public void saveDate(View v){
         String user_name = name_text.getText().toString();
         String user_complaint = complaint_text.getText().toString();
@@ -44,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // Загрузка жалобы
     public void loadDate(View v){
         try {
             FileInputStream file_input = openFileInput("user_info.txt");
@@ -61,4 +83,5 @@ public class MainActivity extends AppCompatActivity {
             throw new RuntimeException(e);
         }
     }
+
 }
